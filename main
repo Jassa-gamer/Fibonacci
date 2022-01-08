@@ -1,0 +1,47 @@
+# Write a program that asks the user how many Fibonnaci numbers to generate and then generates them.
+#  Take this opportunity to think about how you can use functions.
+#   Make sure to ask the user to enter the number of numbers in the sequence to generate.
+#    (Hint: The Fibonnaci seqence is a sequence of numbers where the next number in the sequence is the sum of the previous two numbers in the sequence.
+#     The sequence looks like this: 1, 1, 2, 3, 5, 8, 13, …)
+
+def fibonacci(a):
+
+    b = 0
+    c = 1
+    list1 = [c]
+    for i in range(0,a-1):
+        d = b + c
+        list1.append(d)
+        # list1.append(c)
+        b = c
+        c = d
+        # print("b = ", b)
+        # print("c = ", c)
+        # print("final :", d)
+        print("working")
+    print(list1)
+a = int(input("How many fibonacci number do you want to print : \n "))
+fibonacci(a)
+
+
+# def get_number():
+#     n = int(input("Please give me a number:"))
+#     return n
+#
+#
+# def fibo_seq(size):
+#     n1 = 0
+#     n2 = 1
+#     fibo = [n2]              #  1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233 ,377, 610, 987, 1597, 2584, 4181...
+#     counter = 1
+#
+#     while counter < size:
+#         n = n2 + n1
+#         fibo.append(n)
+#         n1 = n2
+#         n2 = n
+#         counter += 1
+#     return fibo
+#
+#
+# print(fibo_seq(get_number()))
